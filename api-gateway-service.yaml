@@ -7,8 +7,6 @@ spring:
       reactive
   application:
     name: api-gateway-service
-  config:
-    import: "optional:configserver:"
   cloud:
     gateway:
       routes:
@@ -19,7 +17,7 @@ spring:
         - id: user-service-route
           uri: http://127.0.0.1:8080
           predicates:
-            - Path=/*/*/*/users, /*/*/*/users/{externalId}
+            - Path=/*/*/*/users, /*/*/*/users/{externalId}, /*/*/*/users/activation
         - id: project-service-route
           uri: http://127.0.0.1:8082
           predicates:
@@ -30,6 +28,7 @@ spring:
           args:
             name: DefaultCircuitBreaker
             fallbackUri: forward:/fallback
+
   security:
     oauth2:
       client:
@@ -66,12 +65,15 @@ management:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
 
-# ИСПРАВИТЬ
 application:
   security:
     white-list:
       # users-api
       - url: /*/*/*/users
+        methods: POST
+      - url: /*/*/*/users/activation
+        methods: POST
+      - url: /*/*/*/users/*
         methods: POST
 
 logging:
