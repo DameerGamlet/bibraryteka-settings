@@ -4,8 +4,8 @@ server:
 spring:
   application:
     name: authorization-service
-#  config:
-#    import: "optional:configserver:"
+  config:
+    import: "optional:configserver:"
 
 management:
   tracing:
