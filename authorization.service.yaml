@@ -1,11 +1,15 @@
 server:
   port: 9000
+  host:
+    url: http://127.0.0.1
+  ms:
+    api-gateway-url: ${server.host.url}:7777
+    user-service-url: ${server.host.url}:8080
+    auth-service-url: ${server.host.url}:9000
 
 spring:
   application:
     name: authorization-service
-#  config:
-#    import: "optional:configserver:"
 
 management:
   tracing:
@@ -25,13 +29,12 @@ app:
     client-settings:
       client-id: client
       client-secret: "{noop}secret"
-      redirect-login-uri: "http://127.0.0.1:7777/login/oauth2/code/custom-oidc"
-      redirect-success-login-uri: "http://127.0.0.1:7777/authorized"
+      redirect-login-uri: ${server.ms.api-gateway-url}/login/oauth2/code/custom-oidc
+      redirect-success-login-uri: ${server.ms.api-gateway-url}/authorized
     token-settings:
       access-token-life-time-in-minutes: 3600
       refresh-token-lifetime-in-minutes: 7200
-    user-data-provider-url: "http://127.0.0.1:8080/private/api/v1"
-    seller-data-provider-url: "http://127.0.0.1:8085/private/api/v1"
+    user-data-provider-url: ${server.ms.user-service-url}/private/api/v1
 
 logging:
   level:
