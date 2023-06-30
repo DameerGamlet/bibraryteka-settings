@@ -11,7 +11,7 @@ spring:
   application:
     name: authorization-service
   config:
-    import: "optional:configserver:"
+    import: "optional:configserver:http://localhost:8888"
 
 management:
   tracing:
