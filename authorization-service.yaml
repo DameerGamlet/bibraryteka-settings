@@ -1,3 +1,6 @@
+test:
+  name: Success!
+
 server:
   port: 9000
   host:
