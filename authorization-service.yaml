@@ -13,8 +13,6 @@ server:
 spring:
   application:
     name: authorization-service
-  config:
-    import: "optional:configserver:"
 
 app:
   security:
