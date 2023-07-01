@@ -1,6 +1,3 @@
-test:
-  name: Success!
-
 server:
   port: 9000
   host:
@@ -13,6 +10,23 @@ server:
 spring:
   application:
     name: authorization-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      profile: dev
+  config:
+    import: "optional:configserver:"
+
+management:
+  tracing:
+    enabled: false
+    sampling:
+      probability: 0.1
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health
 
 app:
   security:
