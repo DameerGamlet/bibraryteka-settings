@@ -1,5 +1,6 @@
-test:
-  name: Success!
+info:
+  profile:
+    local
 
 server:
   port: 9000
