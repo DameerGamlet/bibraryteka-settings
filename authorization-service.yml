@@ -1,3 +1,6 @@
+test:
+  name: Success!
+
 server:
   port: 9000
   host:
@@ -6,28 +9,11 @@ server:
     api-gateway-url: ${server.host.url}:7777
     user-service-url: ${server.host.url}:8080
     auth-service-url: ${server.host.url}:9000
-
 spring:
   application:
     name: authorization-service
-  profiles:
-    active: dev
-  cloud:
-    config:
-      profile: dev
   config:
     import: "optional:configserver:"
-
-management:
-  tracing:
-    enabled: false
-    sampling:
-      probability: 0.1
-  endpoints:
-    web:
-      exposure:
-        include: prometheus, health
-
 app:
   security:
     client-settings:
@@ -39,7 +25,6 @@ app:
       access-token-life-time-in-minutes: 3600
       refresh-token-lifetime-in-minutes: 7200
     user-data-provider-url: ${server.ms.user-service-url}/private/api/v1
-
 logging:
   level:
     org: INFO
