@@ -14,10 +14,6 @@ spring:
     web-application-type: reactive
   application:
     name: api-gateway-service
-  profiles:
-    active: default
-  config:
-    import: "optional:configserver:http://localhost:8888"
   cloud:
     gateway:
       routes:
