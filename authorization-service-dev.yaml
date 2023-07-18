@@ -16,10 +16,6 @@ spring:
     name: authorization-service
 
 management:
-  tracing:
-    enabled: false
-    sampling:
-      probability: 0.1
   endpoints:
     web:
       exposure:
