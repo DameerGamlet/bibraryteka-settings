@@ -1,6 +1,5 @@
 info:
-  profile:
-    github dev (updated 18.07.2023 23:40)
+  profile: github dev (updated 19.07.2023 19:32) ${TEST}
 
 server:
   port: 9000
@@ -19,7 +18,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: "*"
         base-path: /actuator
   endpoint:
     health:
