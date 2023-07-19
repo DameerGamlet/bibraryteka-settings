@@ -2,7 +2,8 @@ server:
   port: 8090
 
 ms:
-  api-gateway-service: ${microservices.api-gateway-service.url}/
+  api-gateway-service:
+    url: ${microservices.api-gateway-service.url}
 
 spring:
   application:
