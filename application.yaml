@@ -1,0 +1,11 @@
+TEST: it's work new
+
+microservices:
+  server:
+    url: http://127.0.0.1
+  api-gateway-service:
+    url: ${microservices.server.url}:7777
+  user-service:
+    url: ${microservices.server.url}:8080
+  auth-service:
+    url: ${microservices.server.url}:9000

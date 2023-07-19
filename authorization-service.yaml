@@ -1,6 +1,5 @@
 info:
-  profile:
-    github default
+  profile: github default
 
 server:
   port: 9000
