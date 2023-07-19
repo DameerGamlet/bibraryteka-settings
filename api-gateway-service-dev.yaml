@@ -2,8 +2,7 @@ server:
   port: 7777
 
 frontend:
-  react:
-    url: ${microservices.frontend.url}
+  url: ${microservices.frontend.url}
 
 spring:
   main:
