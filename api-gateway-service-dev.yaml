@@ -1,8 +1,9 @@
 server:
   port: 7777
 
-frontend:
-  url: ${microservices.frontend.url}
+ms:
+  frontend:
+    url: ${microservices.frontend.url}
 
 spring:
   main:
