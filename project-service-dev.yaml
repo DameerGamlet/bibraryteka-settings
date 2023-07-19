@@ -19,7 +19,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://127.0.0.1:9000/oauth2/jwks
+          jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
 
   data:
     redis:
@@ -31,9 +31,9 @@ spring:
     type: redis
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/project_db
-    username: user
-    password: password
+    url: ${datasource-config.project-service.url}
+    username: ${datasource-config.project-service.username}
+    password: ${datasource-config.project-service.password}
     driver-class-name: org.postgresql.Driver
 
 management:
@@ -41,13 +41,14 @@ management:
     enabled: false
     sampling:
       probability: 0.1
-  endpoint:
-    gateway:
-      enabled: true
   endpoints:
     web:
       exposure:
-        include: gateway, prometheus
+        include: "*"
+        base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
   metrics:
     tags:
       application: ${spring.application.name}

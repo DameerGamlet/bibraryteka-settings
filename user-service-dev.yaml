@@ -1,6 +1,10 @@
 server:
   port: 8080
 
+frontend:
+  react:
+    url: ${microservices.frontend.url}
+
 spring:
   application:
     name: user-service
@@ -19,7 +23,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://127.0.0.1:9000/oauth2/jwks
+          jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
 
   data:
     redis:
@@ -31,9 +35,9 @@ spring:
     type: redis
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/user_db
-    username: user
-    password: password
+    url: ${datasource-config.user-service.url}
+    username: ${datasource-config.user-service.username}
+    password: ${datasource-config.user-service.password}
     driver-class-name: org.postgresql.Driver
 
 management:
