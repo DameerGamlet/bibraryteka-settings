@@ -16,7 +16,7 @@ spring:
         - id: mail-sender-service-route
           uri: ${microservices.mail-sender-service.url}
           predicates:
-            - Path=/*/*/*/mail/send/activation, /*/*/*/mail/**
+            - Path=/*/*/*/mail/send/activation
 
         - id: user-service-route
           uri: ${microservices.user-service.url}
