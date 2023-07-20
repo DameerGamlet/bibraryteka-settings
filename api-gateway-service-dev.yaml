@@ -69,16 +69,10 @@ management:
 application:
   security:
     white-list:
-      # users-api
-      - url: /*
-        methods: POST
       - url: /*/*/*/users
         methods: POST
       - url: /*/*/*/users/activation
         methods: POST, GET
-      - url: /*/*/*/users/*
-        methods: POST
-      # mail sender
       - url: /*/*/*/mail/send/activation/*
         methods: POST
 
