@@ -3,19 +3,25 @@ TEST: it's work new next
 microservices:
   server:
     url: http://127.0.0.1
+
   frontend:
     url: ${microservices.server.url}:3000
+
   api-gateway-service:
     url: ${microservices.server.url}:7777
+
   user-service:
     url: ${microservices.server.url}:8080
+
   project-service:
     url: ${microservices.server.url}:8082
+
   mail-sender-service:
     url: ${microservices.server.url}:8090
     mail-config:
       username: bibraryteka.sgu@gmail.com
       password: password
+
   auth-service:
     url: ${microservices.server.url}:9000
 
