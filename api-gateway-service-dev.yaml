@@ -76,7 +76,7 @@ application:
       - url: /*/*/*/users/*
         methods: POST
       # mail sender
-      - url: /*/*/*/users/send/activation
+      - url: /*/*/*/users/send/activation/*
         methods: POST, GET
 
 logging:
