@@ -73,7 +73,7 @@ application:
         methods: POST
       - url: /*/*/*/users/activation
         methods: POST, GET
-      - url: /*/*/*/mail/send/activation, /*/*/*/mail/**
+      - url: /*/*/*/mail/send/activation
         methods: POST
 
 logging:
