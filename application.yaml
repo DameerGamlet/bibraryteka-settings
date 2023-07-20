@@ -1,5 +1,3 @@
-TEST: it's work new next
-
 microservices:
   server:
     url: http://127.0.0.1
