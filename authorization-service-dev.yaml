@@ -1,5 +1,5 @@
 info:
-  profile: github dev (updated 19.07.2023 19:32) ${TEST} - ${microservices.user-service.url}/private/api/v1
+  profile: github dev
 
 server:
   port: 9000
