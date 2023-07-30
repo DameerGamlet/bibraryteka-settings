@@ -1,3 +1,6 @@
+info:
+  profile: global dev
+
 server:
   port: 7777
 
