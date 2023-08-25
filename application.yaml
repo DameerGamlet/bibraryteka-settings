@@ -28,12 +28,10 @@ datasource-config:
     host: localhost
     port: 5432
   project-service:
-    name: project_db
-    url: jdbc:postgresql://${datasource-config.postgres.host}:${datasource-config.postgres.port}/${datasource-config.project-service.name}
+    url: jdbc:postgresql://localhost:5432/project_db
     username: user
     password: password
   user-service:
-    name: user_db
-    url: jdbc:postgresql://${datasource-config.postgres.host}:${datasource-config.user-service.port}/${datasource-config.user-service.name}
+    url: jdbc:postgresql://localhost:5432/user_db
     username: user
     password: password
