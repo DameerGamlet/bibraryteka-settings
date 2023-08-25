@@ -1,20 +1,17 @@
+---
 server:
   port: 8090
-
 ms:
   api-gateway-service:
     url: ${microservices.api-gateway-service.url}
-
 spring:
   application:
     name: mail-sender-service
-
   mail:
     host: localhost
     port: 1025
     username: ${microservices.mail-sender-service.mail-config.username}
     password: ${microservices.mail-sender-service.mail-config.password}
-
     properties:
       mail:
         smtp:
@@ -26,7 +23,6 @@ spring:
           connectiontimeout: 5000
           timeout: 3000
           writetimeout: 5000
-
 management:
   endpoints:
     web:

@@ -1,10 +1,9 @@
+---
 server:
   port: 7777
-
 ms:
   frontend:
     url: ${microservices.frontend.url}
-
 spring:
   main:
     web-application-type: reactive
@@ -17,17 +16,14 @@ spring:
           uri: ${microservices.mail-sender-service.url}
           predicates:
             - Path=/*/*/*/mail/send/activation
-
         - id: user-service-route
           uri: ${microservices.user-service.url}
           predicates:
             - Path=/*/*/*/users, /*/*/*/users/{externalId}, /*/*/*/users/activation
-
         - id: project-service-route
           uri: ${microservices.project-service.url}
           predicates:
             - Path=/*/*/*/projects, /*/*/*/projects/{externalId}, /*/*/*/projects/**
-
       default-filters:
         - name: AuthFilter
         - name: CircuitBreaker
@@ -50,7 +46,7 @@ spring:
             redirect-uri: ${microservices.api-gateway-service.url}/login/oauth2/code/custom-oidc
         provider:
           custom-oidc:
-            issuer-uri: ${microservices.auth-service.url}
+            issuer-uri: "${microservices.auth-service.url}"
             token-uri: ${microservices.auth-service.url}/oauth2/token
             authorization-uri: ${microservices.auth-service.url}/oauth2/authorize
             jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
@@ -64,7 +60,6 @@ management:
   endpoint:
     health:
       show-details: always
-
 application:
   security:
     white-list:
@@ -74,7 +69,6 @@ application:
         methods: POST, GET
       - url: /*/*/*/mail/send/activation
         methods: POST
-
 logging:
   level:
     org: INFO

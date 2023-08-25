@@ -1,13 +1,11 @@
+---
 info:
   profile: github dev
-
 server:
   port: 9000
-
 spring:
   application:
     name: authorization-service
-
 management:
   endpoints:
     web:
@@ -17,7 +15,6 @@ management:
   endpoint:
     health:
       show-details: always
-
 app:
   security:
     client-settings:
@@ -29,7 +26,6 @@ app:
       access-token-life-time-in-minutes: 3600
       refresh-token-lifetime-in-minutes: 7200
     user-data-provider-url: ${microservices.user-service.url}/private/api/v1
-
 logging:
   level:
     org: INFO
