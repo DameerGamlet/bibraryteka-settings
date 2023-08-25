@@ -3,7 +3,7 @@ info:
   profile: github dev
 ms:
   auth-service:
-    url: ${microservices.auth-service.url}
+    url: "${microservices.auth-service.url}"
 server:
   port: 9000
 spring:
