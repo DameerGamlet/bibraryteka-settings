@@ -55,27 +55,6 @@ spring:
             authorization-uri: ${microservices.auth-service.url}/oauth2/authorize
             jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
             user-info-uri: ${microservices.auth-service.url}/userinfo
-
-  security:
-    oauth2:
-      client:
-        registration:
-          custom-oidc:
-            provider: custom-oidc
-            scope: openid
-            client-id: client
-            client-secret: secret
-            authorization-grant-type: authorization_code
-            client-authentication-method: client_secret_basic
-            redirect-uri: ${server.ms.api-gateway-url}/login/oauth2/code/custom-oidc
-        provider:
-          custom-oidc:
-            issuer-uri: ${server.ms.auth-service-url}
-            token-uri: ${server.ms.auth-service-url}/oauth2/token
-            authorization-uri: ${server.ms.auth-service-url}/oauth2/authorize
-            jwk-set-uri: ${server.ms.auth-service-url}/oauth2/jwks
-            user-info-uri: ${server.ms.auth-service-url}/userinfo
-
 management:
   endpoints:
     web:
