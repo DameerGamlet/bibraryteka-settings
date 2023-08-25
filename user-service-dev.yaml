@@ -3,7 +3,7 @@ server:
   port: 8080
 ms:
   api-gateway-service:
-    url: "${microservices.api-gateway-service.url}"
+    url: http://127.0.0.1:9000
   frontend:
     url: ${microservices.frontend.url}
 spring:
