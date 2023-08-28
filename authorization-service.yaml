@@ -1,6 +1,6 @@
 ---
 info:
-  profile: github dev
+  profile: github default
 server:
   port: 9000
 spring:
