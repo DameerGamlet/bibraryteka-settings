@@ -24,7 +24,8 @@ spring:
         jwt:
           jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
   datasource:
-    url: jdbc:postgresql://localhost:5432/user_db
+    url: jdbc:postgresql://192.168.0.80:5432/user_db
+    # url: jdbc:postgresql://localhost:5432/user_db
     username: ${datasource-config.user-service.username}
     password: ${datasource-config.user-service.password}
     driver-class-name: org.postgresql.Driver
