@@ -19,6 +19,7 @@ microservices:
   mail-sender-service:
     url: ${host-url}:8090
     mail-config:
+      mail-host: ${host-url}
       username: bibraryteka.sgu@gmail.com
       password: password
   auth-service:
