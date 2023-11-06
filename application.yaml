@@ -1,7 +1,7 @@
 ---
 microservices:
   server:
-    url: http://192.168.0.80
+    url: http://192.168.0.90
     # url: http://127.0.0.1
   frontend:
     url: ${microservices.server.url}:3000
