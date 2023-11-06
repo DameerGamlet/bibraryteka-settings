@@ -8,7 +8,8 @@ spring:
   application:
     name: mail-sender-service
   mail:
-    host: localhost
+    host: "{{ host }}"
+    # host: localhost
     port: 1025
     username: ${microservices.mail-sender-service.mail-config.username}
     password: ${microservices.mail-sender-service.mail-config.password}

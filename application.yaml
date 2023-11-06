@@ -2,6 +2,11 @@
 host: 192.168.0.90
 host-url: http://192.168.0.90
 
+service:
+  frontend:
+    url: localhost:3000
+    # url: ${host-url}:3000
+
 microservices:
   frontend:
     url: ${host-url}:3000

@@ -3,7 +3,7 @@ server:
   port: 7777
 ms:
   frontend:
-    url: ${microservices.frontend.url}
+    url: ${service.frontend.url}
 spring:
   main:
     web-application-type: reactive
