@@ -1,32 +1,28 @@
 ---
+host-url: http://192.168.0.90
+
 microservices:
-  server:
-    url: http://192.168.0.90
-    # url: http://127.0.0.1
   frontend:
-    url: ${microservices.server.url}:3000
+    url: ${host-url}:3000
   api-gateway-service:
-    url: ${microservices.server.url}:7777
+    url: ${host-url}:7777
   user-service:
-    url: ${microservices.server.url}:8080
+    url: ${host-url}:8080
   project-service:
-    url: ${microservices.server.url}:8082
+    url: ${host-url}:8082
   mail-sender-service:
-    url: ${microservices.server.url}:8090
+    url: ${host-url}:8090
     mail-config:
       username: bibraryteka.sgu@gmail.com
       password: password
   auth-service:
-    url: ${microservices.server.url}:9000
+    url: ${host-url}:9000
 datasource-config:
-  postgres:
-    host: localhost
-    port: 5432
   project-service:
-    url: jdbc:postgresql://localhost:5432/project_db
+    url: jdbc:postgresql://${host-url}:5432/project_db
     username: user
     password: password
   user-service:
-    url: jdbc:postgresql://localhost:5432/user_db
+    url: jdbc:postgresql://${host-url}:5432/user_db
     username: user
     password: password
