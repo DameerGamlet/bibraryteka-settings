@@ -3,7 +3,7 @@ server:
   port: 8090
 ms:
   api-gateway-service:
-    url: http://127.0.0.1:7777 #"${microservices.api-gateway-service.url}"
+    url: ${services.api.url} # http://127.0.0.1:7777
 spring:
   application:
     name: mail-sender-service
