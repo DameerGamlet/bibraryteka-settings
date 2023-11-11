@@ -8,11 +8,11 @@ spring:
   application:
     name: mail-sender-service
   mail:
-    host: ${microservices.mail-sender-service.mail-config.mail-host}
+    host: ${services.mail.url}
     # host: localhost
     port: 1025
-    username: ${microservices.mail-sender-service.mail-config.username}
-    password: ${microservices.mail-sender-service.mail-config.password}
+    username: bibraryteka.sgu@gmail.com
+    password: password
     properties:
       mail:
         smtp:

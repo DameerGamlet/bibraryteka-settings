@@ -8,6 +8,8 @@ services:
     # url: ${host-url}:3000
   api: 
     url: ${host-url}:7777
+  mail:
+    url: ${host-url}:8090
 
 microservices:
   frontend:
@@ -20,10 +22,6 @@ microservices:
     url: ${host-url}:8082
   mail-sender-service:
     url: ${host-url}:8090
-    mail-config:
-      mail-host: ${host}
-      username: bibraryteka.sgu@gmail.com
-      password: password
   auth-service:
     url: ${host-url}:9000
 datasource-config:
