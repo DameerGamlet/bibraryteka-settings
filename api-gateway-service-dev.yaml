@@ -1,9 +1,6 @@
 ---
 server:
   port: 7777
-ms:
-  frontend:
-    url: ${services.frontend.url}
 spring:
   main:
     web-application-type: reactive
@@ -13,11 +10,11 @@ spring:
     gateway:
       routes:
         - id: mail-sender-service-route
-          uri: ${microservices.mail-sender-service.url}
+          uri: ${services.mail.url}
           predicates:
             - Path=/*/*/*/mail/send/activation
         - id: user-service-route
-          uri: ${microservices.user-service.url}
+          uri: ${services.user.url}
           predicates:
             - Path=/*/*/*/users, /*/*/*/users/{externalId}, /*/*/*/users/activation
         - id: project-service-route
