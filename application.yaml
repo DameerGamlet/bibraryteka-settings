@@ -1,19 +1,20 @@
 ---
 # host: 192.168.0.90
-host: 127.0.0.1
+host: 192.168.0.90
 host-url: http://${host}
+lost-url: http://127.0.0.1
 host-database: 192.168.0.90
 
 services:
   frontend:
     url: ${host-url}:3000
   api: 
-    url: ${host-url}:7777
+    url: ${lost-url}:7777
   mail:
     url: ${host-url}:8090
   user:
-    url: ${host-url}:8080
+    url: ${lost-url}:8080
   project-service:
-    url: ${host-url}:8082
+    url: ${lost-url}:8082
   auth: 
     url: ${host-url}:9000
