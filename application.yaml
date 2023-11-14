@@ -16,7 +16,7 @@ services:
       url: ${host}
   user:
     url: ${lost-url}:8080
-  project-service:
+  project:
     url: ${lost-url}:8082
   auth: 
     url: ${host-url}:9000
