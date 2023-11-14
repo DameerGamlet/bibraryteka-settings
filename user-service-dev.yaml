@@ -3,9 +3,9 @@ server:
   port: 8080
 ms:
   api-gateway-service:
-    url: ${microservices.api-gateway-service.url}
+    url: ${services.api.url}
   frontend:
-    url: ${microservices.frontend.url}
+    url: ${services.frontend.url}
 spring:
   application:
     name: user-service
@@ -24,8 +24,7 @@ spring:
         jwt:
           jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
   datasource:
-    url:  jdbc:postgresql://${host}:5432/user_db
-    # url: jdbc:postgresql://localhost:5432/user_db
+    url:  jdbc:postgresql://${host-database}:5432/user_db
     username: user
     password: password
     driver-class-name: org.postgresql.Driver
@@ -61,7 +60,7 @@ app:
       name_pattern: "[а-яА-Яa-zA-Z]{2,100}"
       phone_pattern: ((\\+7)|(\\+8)|[78])?((-\\d{3}-)|(\\(\\d{3}\\))|( \\d{3} )|(\\d{3}))\\d{3}[- ]?\\d{2}[- ]?\\d{2}
       grouped_phone_numbers_pattern: (\\d{1})(\\d{3})(\\d{3})(\\d{2})(\\d{2})
-      password_pattern: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[#$@!%&*?])[A-Za-z\\d#$@!%&*?]{8,30}$
+      password_pattern: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,30}$
 logging:
   level:
     web: INFO

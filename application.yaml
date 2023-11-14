@@ -1,11 +1,12 @@
 ---
-host: 192.168.0.90
+# host: 192.168.0.90
+host: 127.0.0.1
 host-url: http://${host}
+host-database: 192.168.0.90
 
 services:
   frontend:
-    url: localhost:3000
-    # url: ${host-url}:3000
+    url: ${host-url}:3000
   api: 
     url: ${host-url}:7777
   mail:
@@ -28,6 +29,6 @@ microservices:
     url: ${host-url}:9000
 datasource-config:
   project-service:
-    url: jdbc:postgresql://${host}:5432/project_db
+    url: jdbc:postgresql://${host-database}:5432/project_db
     username: user
     password: password

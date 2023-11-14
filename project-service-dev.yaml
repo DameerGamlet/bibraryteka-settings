@@ -26,9 +26,9 @@ spring:
   cache:
     type: redis
   datasource:
-    url: ${datasource-config.project-service.url}
-    username: ${datasource-config.project-service.username}
-    password: ${datasource-config.project-service.password}
+    url:  jdbc:postgresql://${host-database}:5433/project_db
+    username: project
+    password: password
     driver-class-name: org.postgresql.Driver
 management:
   tracing:
