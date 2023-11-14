@@ -12,6 +12,8 @@ services:
     url: ${lost-url}:7777
   mail:
     url: ${host-url}:8090
+    config:
+      url: ${host}
   user:
     url: ${lost-url}:8080
   project-service:

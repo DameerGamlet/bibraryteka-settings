@@ -44,10 +44,10 @@ spring:
         provider:
           custom-oidc:
             issuer-uri: ${services.auth.url}
-            token-uri: ${microservices.auth-service.url}/oauth2/token
-            authorization-uri: ${microservices.auth-service.url}/oauth2/authorize
-            jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
-            user-info-uri: ${microservices.auth-service.url}/userinfo
+            token-uri: ${services.auth.url}/oauth2/token
+            authorization-uri: ${services.auth.url}/oauth2/authorize
+            jwk-set-uri: ${services.auth.url}/oauth2/jwks
+            user-info-uri: ${services.auth.url}/userinfo
 management:
   endpoints:
     web:
