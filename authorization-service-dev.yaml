@@ -20,12 +20,12 @@ app:
     client-settings:
       client-id: client
       client-secret: "{noop}secret"
-      redirect-login-uri: ${microservices.api-gateway-service.url}/login/oauth2/code/custom-oidc
-      redirect-success-login-uri: ${microservices.api-gateway-service.url}/authorized
+      redirect-login-uri: ${services.api.url}/login/oauth2/code/custom-oidc
+      redirect-success-login-uri: ${services.api.url}/authorized
     token-settings:
       access-token-life-time-in-minutes: 3600
       refresh-token-lifetime-in-minutes: 7200
-    user-data-provider-url: ${microservices.user-service.url}/private/api/v1
+    user-data-provider-url: ${services.user.url}/private/api/v1
 logging:
   level:
     org: INFO
