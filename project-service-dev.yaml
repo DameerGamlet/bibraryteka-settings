@@ -13,11 +13,6 @@ spring:
       hibernate:
         generate_statistics: false
         format_sql: true
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: ${services.auth.url}/oauth2/jwks
   data:
     redis:
       host: localhost
