@@ -18,7 +18,7 @@ spring:
           predicates:
             - Path=/*/*/*/users, /*/*/*/users/{externalId}, /*/*/*/users/activation
         - id: project-service-route
-          uri: ${microservices.project-service.url}
+          uri: ${services.project.url}
           predicates:
             - Path=/*/*/*/projects, /*/*/*/projects/{externalId}, /*/*/*/projects/**
       default-filters:
