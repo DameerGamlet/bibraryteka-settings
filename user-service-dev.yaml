@@ -1,11 +1,7 @@
 ---
 server:
   port: 8080
-ms:
-  api-gateway-service:
-    url: ${services.api.url}
-  frontend:
-    url: ${services.frontend.url}
+  
 spring:
   application:
     name: user-service
@@ -22,7 +18,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
+          jwk-set-uri: ${services.auth.url}/oauth2/jwks
   datasource:
     url:  jdbc:postgresql://${host-database}:5432/user_db
     username: user
