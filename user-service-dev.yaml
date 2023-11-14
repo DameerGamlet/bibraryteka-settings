@@ -52,12 +52,12 @@ app:
       INCORRECT_EMAIL_VALIDATION_ERROR_CODE: "Incorrect email format: %s"
       INCORRECT_PASSWORD_VALIDATION_ERROR_CODE: "Incorrect password format: %s. The correct password should contain:[at least 1 uppercase letter, at least 1 lowercase letter, at least 1 number, at least 1 special character]. Minimum 8 characters and maximum 30 characters."
       INCORRECT_SEX_TYPE_ERROR_CODE: "Incorrect enum format: %s. Expected[MALE, FEMALE]"
-  # patterns:
-  #   email_pattern: ^[a-zA-Z0-9_!#$%&'+=?`{|}~^.-]+@[a-zA-Z0-9.-]+$
-  #   name_pattern: "[а-яА-Яa-zA-Z]{2,100}"
-  #   phone_pattern: ((\\+7)|(\\+8)|[78])?((-\\d{3}-)|(\\(\\d{3}\\))|( \\d{3} )|(\\d{3}))\\d{3}[- ]?\\d{2}[- ]?\\d{2}
-  #   grouped_phone_numbers_pattern: (\\d{1})(\\d{3})(\\d{3})(\\d{2})(\\d{2})
-  #   password_pattern: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,30}$
+  patterns:
+    email_pattern: ^[a-zA-Z0-9_!#$%&'+=?`{|}~^.-]+@[a-zA-Z0-9.-]+$
+    name_pattern: "[а-яА-Яa-zA-Z]{2,100}"
+    phone_pattern: ((\\+7)|(\\+8)|[78])?((-\\d{3}-)|(\\(\\d{3}\\))|( \\d{3} )|(\\d{3}))\\d{3}[- ]?\\d{2}[- ]?\\d{2}
+    grouped_phone_numbers_pattern: (\\d{1})(\\d{3})(\\d{3})(\\d{2})(\\d{2})
+    password_pattern: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,30}$
 logging:
   level:
     web: INFO
