@@ -5,7 +5,7 @@ spring:
   application:
     name: mail-sender-service
   mail:
-    host: ${host}
+    host: ${services.mail.config.url}
     # host: localhost
     port: 1025
     username: bibraryteka.sgu@gmail.com
@@ -38,7 +38,14 @@ message-mail: |
     <h2>Активация аккаунта</h2>    
     <p>%s, спасибо за регистрацию в нашей системе. Для активации вашего аккаунта нажмите на кнопку ниже:</p>
     <br>
-    <a href="%s" style="display: inline-block; padding: 12px 24px; background-color: #007bff; color: #fff; text-decoration: none; font-size: 18px;">Активировать аккаунт</a>   
+    <a href="%s" 
+      style="
+        display: inline-block; 
+        padding: 12px 24px; 
+        background-color: #007bff; 
+        color: #fff; 
+        text-decoration: none; 
+        font-size: 18px;">Активировать аккаунт</a>   
     <br><br>    
     <p>Если кнопка выше не работает, вы также можете скопировать и вставить следующую ссылку в адресную строку вашего браузера:</p>   
     <a href="%s">%s</a>   

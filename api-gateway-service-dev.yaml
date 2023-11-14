@@ -40,10 +40,10 @@ spring:
             client-secret: secret
             authorization-grant-type: authorization_code
             client-authentication-method: client_secret_basic
-            redirect-uri: ${microservices.api-gateway-service.url}/login/oauth2/code/custom-oidc
+            redirect-uri: ${services.api.url}/login/oauth2/code/custom-oidc
         provider:
           custom-oidc:
-            issuer-uri: ${microservices.auth-service.url}
+            issuer-uri: ${services.auth.url}
             token-uri: ${microservices.auth-service.url}/oauth2/token
             authorization-uri: ${microservices.auth-service.url}/oauth2/authorize
             jwk-set-uri: ${microservices.auth-service.url}/oauth2/jwks
