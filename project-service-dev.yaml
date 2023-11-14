@@ -21,8 +21,8 @@ spring:
   cache:
     type: redis
   datasource:
-    url:  jdbc:postgresql://${host-database}:5433/project_db
-    username: project
+    url:  jdbc:postgresql://${host-database}:5432/project_db
+    username: user
     password: password
     driver-class-name: org.postgresql.Driver
 management:
