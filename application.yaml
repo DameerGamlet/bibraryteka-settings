@@ -7,7 +7,7 @@ host-database: 192.168.0.90
 
 services:
   frontend:
-    url: ${host-url}:3000
+    url: ${host-url}:3010
   api: 
     url: ${lost-url}:7777
   mail:
