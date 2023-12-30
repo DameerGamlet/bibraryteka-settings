@@ -1,5 +1,4 @@
 ---
-# host: 192.168.0.90
 host: 192.168.0.90
 host-url: http://${host}
 lost-url: http://127.0.0.1
@@ -10,13 +9,17 @@ services:
     url: ${host-url}:3010
   api: 
     url: ${lost-url}:7777
-  mail:
-    url: ${host-url}:8090
-    config:
-      url: ${host}
+  auth: 
+    url: ${host-url}:9000
   user:
     url: ${lost-url}:8080
   project:
     url: ${lost-url}:8082
-  auth: 
-    url: ${host-url}:9000
+  analysis:
+    url: ${lost-url}:8085
+  bib-system:
+    url: ${lost-url}:8086
+  mail:
+    url: ${host-url}:8090
+    config:
+      url: ${host}
