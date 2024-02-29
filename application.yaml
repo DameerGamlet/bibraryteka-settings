@@ -6,15 +6,17 @@ host-database: 192.168.0.90
 
 services:
   frontend:
-    url: ${host-url}:3010
+    url: ${lost-url}:3010
   api: 
     url: ${lost-url}:7777
   auth: 
-    url: ${host-url}:9000
+    url: ${lost-url}:9000
   user:
     url: ${lost-url}:8080
   project:
     url: ${lost-url}:8082
+  reporting:
+    url: ${lost-url}:8083
   analysis:
     url: ${lost-url}:8085
   bib-system:
