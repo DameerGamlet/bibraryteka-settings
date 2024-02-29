@@ -13,6 +13,8 @@ services:
     url: ${lost-url}:9000
   user:
     url: ${lost-url}:8080
+    database:
+      url: ${lost}
   project:
     url: ${lost-url}:8082
   reporting:
