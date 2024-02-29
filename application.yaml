@@ -24,4 +24,4 @@ services:
   mail:
     url: ${lost-url}:8090
     config:
-      url: ${host}
+      url: ${lost}
