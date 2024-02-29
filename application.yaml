@@ -1,7 +1,8 @@
 ---
 host: 192.168.0.90
+lost: 127.0.0.1
 host-url: http://${host}
-lost-url: http://127.0.0.1
+lost-url: http://${lost}
 host-database: 192.168.0.90
 
 services:
