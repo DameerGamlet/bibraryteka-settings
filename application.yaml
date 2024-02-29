@@ -22,6 +22,6 @@ services:
   bib-system:
     url: ${lost-url}:8086
   mail:
-    url: ${host-url}:8090
+    url: ${lost-url}:8090
     config:
       url: ${host}
